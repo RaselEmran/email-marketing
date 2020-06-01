@@ -1,0 +1,654 @@
+<!doctype html>
+<!--[if IE 6 ]>
+<html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>
+<html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <title> Email Marketing </title>
+
+    <meta name="description"
+          content="Email Marketing by xcoder.io send huge email for better marketing very easily at a time with social login ">
+    <meta name="author" content="xcoder.io">
+    <meta name="copyright" content="xcoder.io">
+    <meta name="generator" content="xcoder.io">
+    <meta name="date" content="2016-07-03T00:00:00+02:00">
+
+    <link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.scrollTo.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script>document.createElement('section');
+    var duration = '500', easing = 'swing';</script>
+    <script src="assets/js/script.js"></script>
+    <style>
+        html {
+            background-color: #EEEEEE;
+            color: #383838;
+        }
+
+        ::-moz-selection {
+            background: #333636;
+            color: #00DFFC;
+        }
+
+        ::selection {
+            background: #333636;
+            color: #00DFFC;
+        }
+
+        #documenter_sidebar #documenter_logo {
+            background-image: url(logo.png);
+        }
+
+        a {
+            color: #008C9E;
+        }
+
+        .btn {
+            border-radius: 3px;
+        }
+
+        .btn-primary {
+            background-image: -moz-linear-gradient(top, #008C9E, #006673);
+            background-image: -ms-linear-gradient(top, #008C9E, #006673);
+            background-image: -webkit-gradient(linear, 0 0, 0 008 C9E%, from(#343838), to(#006673));
+            background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+            background-image: -o-linear-gradient(top, #008C9E, #006673);
+            background-image: linear-gradient(top, #008C9E, #006673);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+            border-color: #006673 #006673 #bfbfbf;
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary.active,
+        .btn-primary.disabled,
+        .btn-primary[disabled] {
+            border-color: #008C9E #008C9E #bfbfbf;
+            background-color: #006673;
+        }
+
+        hr {
+            border-top: 1px solid #D4D4D4;
+            border-bottom: 1px solid #FFFFFF;
+        }
+
+        #documenter_sidebar, #documenter_sidebar ul a {
+            background-color: #2C3E50;
+            color: #FFFFFF;
+        }
+
+        #documenter_sidebar ul a {
+            -webkit-text-shadow: 1px 1px 0px #494F4F;
+            -moz-text-shadow: 1px 1px 0px #494F4F;
+            text-shadow: 1px 1px 0px #494F4F;
+        }
+
+        #documenter_sidebar ul {
+            border-top: 1px solid #212424;
+        }
+
+        #documenter_sidebar ul a {
+            border-top: 1px solid #494F4F;
+            border-bottom: 1px solid #212424;
+            color: #FFFFFF;
+        }
+
+        #documenter_sidebar ul a:hover {
+            background: #22313F;
+            color: #00DFFC;
+            border-top: 1px solid #333636;
+        }
+
+        #documenter_sidebar ul a.current {
+            background: #22313F;
+            color: #00DFFC;
+            border-top: 1px solid #333636;
+        }
+
+        #documenter_copyright {
+            display: block !important;
+            visibility: visible !important;
+        }
+
+        .preview {
+            max-height: 600px;
+            -webkit-box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.1);
+            clear: both;
+            margin: 20px 20px;
+        }
+
+        .screenshot-image {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body class="documenter-project-the-invoicer">
+<div id="documenter_sidebar">
+    <br/>
+    <center>
+        <a href="#documenter_cover">
+            <img src="assets/img/Thumnail.png" width="60"><br/>
+
+        </a>
+    </center>
+
+    <!-- Navigation Start-->
+    <ul id="documenter_nav">
+        <li><a class="current" href="#start">Start</a></li>
+        <li><a href="#features" title="Features">Features</a></li>
+        <li><a href="#install" title="intro">Installation</a></li>
+        <li><a href="#email_marketing" title="Email Marketing">Email Marketing</a></li>
+        <li><a href="#media" title="Media"> Media </a></li>
+        <li><a href="#template" title="Template"> Template </a></li>
+        <li><a href="#email_list" title="Email List">Email List</a></li>
+        <li><a href="#send_email" title="Send Mail"> Send Mail </a></li>
+        <li><a href="#social_login" title="Social login"> Social Login</a></li>
+        <li><a href="#fb" title="Facebook">Facebook</a></li>
+        <li><a href="#twitter" title="Twitter">Twitter</a></li>
+        <li><a href="#google" title="Google">Google</a></li>
+        <li><a href="#github" title="Github">Github</a></li>
+        <li><a href="#linkedin" title="Linked In">Linked In</a></li>
+        <li><a href="#mail" title="Mail">Mail Settings</a></li>
+        <li><a href="#mailgun" title="mailgun">Mailgun</a></li>
+        <li><a href="#amazon_ses" title="Amazon Ses">Amazon SES</a></li>
+        <li><a href="#mandrill" title="Mandrill">Mandrill</a></li>
+        <li><a href="#user" title="User">User</a></li>
+        <li><a href="#track_log" title="Track Log">Track Log</a></li>
+        <li><a href="#backup" title="Track Log">Database Backup</a></li>
+        <li><a href="#source_code" title="Source_Code">Source Code Structure</a></li>
+        <li><a href="#customer_support" title="Customer_Support">Customer Support</a></li>
+
+    </ul>
+    <!-- Navigation End-->
+    <div id="documenter_copyright">&COPY; xCoder.io 2016<br>
+
+    </div>
+</div>
+
+<!-- Home Section Start-->
+<div id="documenter_content">
+
+    <section id="start">
+        <h1>E-Marketing V 1.0</h1>
+
+        <h2>Email Marketing </h2>
+        <hr>
+        <table>
+            <tr>
+                <td>Support :</td>
+                <td><a href="mailto:xcoderdotio@gmail.com">xcoderdotio@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td>Developer :</td>
+                <td><a href="//xcoder.io">xCoder.io</a></td>
+            </tr>
+        </table>
+        <hr>
+        <img src="assets/img/Thumnail.png">
+
+        <p>
+            Thank you for your Buying Email Marketing Tool.<br/>
+            Please read carefully the complete documentation before starting.
+        </p>
+    </section>
+
+    <!-- Home Section End -->
+
+
+    <!-- Features Section Start -->
+    <section id="features">
+        <div class="page-header"><h3>Key Features:</h3>
+            <hr class="notop">
+        </div>
+        <ul>
+            <li>Simple Email Marketing Tool (No need coding skill)</li>
+            <li>Create Email Template by drag & drop</li>
+            <li>Send Unlimited Email with your Created Template.</li>
+            <li>SMTP & PHP Mail option</li>
+            <li>Amazon SES, Mailgun, Maildrill SMTP Integration</li>         
+            <li>Create Email Group/ list</li>
+            <li>Upload Email list form excel file</li>
+            <li>Nicer & clean email list / group management</li>
+            <li>Login with Social Media.</li>
+            <li>Mobile compatible.</li>
+            <li>Multi language support.</li>
+            <li>Beautiful Dashboard.</li>
+            <li>Beautiful track log system.</li>
+            <li>Manage User.</li>
+        </ul>
+        <br/>
+        <img style="width: 100%" src="assets/img/dashboard.png">
+        <br>
+        <img style="width: 100%;margin-top:20px" src="assets/img/User.png">
+        <br/>
+        <img style="width: 100%;margin-top:20px" src="assets/img/email-list.png">
+        <br/>
+        <img style="width: 100%;margin-top:20px" src="assets/img/template.png">
+        <br/>
+        <img style="width: 100%;margin-top:20px" src="assets/img/sendmail.png">
+        <br/>
+        <img style="width: 100%;margin-top:20px" src="assets/img/Activities.png">
+    </section>
+    <!-- Features Section End -->
+
+
+
+
+
+    <!-- Installation Section start -->
+    <section id="install">
+        <div class="page-header"><h3>Installation</h3>
+            <hr class="notop">
+        </div>
+        <h2>Installation Process</h2>
+        <ul>
+            <li>Creating a new database into your server</li>
+            <li>Unzip the downloaded folder</li>
+            <li>Copy the files inside the zip folder : <b>Email Marketing</b> into your server</li>
+            <li>The auto web installer will start</li>
+            <li>Follow on-screen instructions to finish the installation.</li>
+            <li>Enter your database settings</li>
+            <li>Press the "Install" button.</li>
+            <li>That's it!</li>
+        </ul>
+        <div class="page-header"><h3>Creating a new database</h3>
+            <hr class="notop">
+        </div>
+        <p>Before Install you have to get ready your database first.
+
+            Firstly, You have to create a new database before installing Email Marketing in your mysql
+            server. If you already know how to do this/or have already created one just skip to the next step.
+
+            Your host will most likely be running phpMyAdmin as mysql manager, if that's the case here's a step by step
+            guide (if not the proccess will be very similar on other managers).
+
+            Login to your control panel, find and click phpMyAdmin link: Click on the database tab in the top menu,
+            enter any name you like and click create</p>
+        <img style="width: 100%" src="assets/img/db_ex_3.png">
+
+        <div class="page-header"><h3>Uploading Files</h3>
+            <hr class="notop">
+        </div>
+        <p>After creating a database, unzpip the .zip file you donwloaded from CodeCanyon and upload the contents of
+            Email Marketing Login folder to your servers root folder (usually called www or html or something
+            similar) or a sub-directory, shared hosting providers usually have a web based file manager, but you should
+            use something like Filezilla to do the upload as the web based managers can cause various problems fairly
+            often.
+
+            Make sure that application/storage and all the sub-folders are writable by your server (have 777 permissions
+            if you are on shared hosting). You can change files and folders permissions by right-clicking them in the
+            filemanager, clicking file permissions, and then entering 777 in the permissions field.</p>
+
+        <div class="page-header"><h3>Installing Email Marketing </h3>
+            <hr class="notop">
+        </div>
+        <p>After uploading 'Email Marketing' files, simply open your site url and follow on-screen
+            instructions to finish the installation.</p>
+        <img style="width: 100%" src="assets/img/Installation.png">
+        <img style="width: 100%" src="assets/img/Installation_2.png">
+        <img style="width: 100%" src="assets/img/Installation_3.png">
+    </section>
+    <!-- Installation Section End -->
+
+
+    <!-- Email Marketing Section start -->
+    <section id="email_marketing">
+        <div class="page-header"><h3>Email Marketing</h3>
+            <hr class="notop">
+        </div>
+        <h2>Email Marketing Process</h2>
+        <ul>
+            <li>Create a new Media in dashboard. Click <a href="#media">here </a> for how to create Media in details. </li>
+            <li>Create a Template in dashboard. Click <a href="#template">here </a> to create a template in details. </li>
+            <li>Create <b>Email List</b> in your dashboard. Click <a href="#email_list">here </a> to create a <b>Email List</b> in details. </li>
+            <li> Then Send Mail to your desired <b>Email List</b> from dashboard. Click <a href="#send_list">here </a> to know how you can send mail in details. </li>
+            <li>That's all!</li>
+        </ul>
+    </section>
+    <!-- Email Marketing Section End -->
+
+
+    <!-- Media Section start -->
+    <section id="media">
+        <div class="page-header"><h3>Media setting</h3>
+            <hr class="notop">
+        </div>
+        <h2>Media Setting Process</h2>
+        <ul>
+            <li>Go to dashboard. Click <b>Media </b> Menu to create Media. </li>
+            <li>It will expand with All Media & Create Media tabs. Click <b>Create Media </b> and fill all the query. Give Media Name and Upload a Image.</li>
+            <li>Press the "Submit" button.</li>
+            <li>That's it!</li>
+        </ul>
+        <div class="page-header"><h3>Creating a new Media</h3>
+            <hr class="notop">
+        </div>
+        <p>Follow the above instructions also you can help the below image instruction. Then go to create a template part.</p>
+        <img style="width: 100%" src="assets/img/media.png">
+    </section>
+    <!-- Media Section End -->
+
+
+    <!-- Template Section start -->
+    <section id="template">
+        <div class="page-header"><h3>Template setting</h3>
+            <hr class="notop">
+        </div>
+        <h2>Template Setting Process</h2>
+        <ul>
+            <li>Go to dashboard. Click <b>Template </b> Menu to create a Template. </li>
+            <li>It will expand with All Template & Create Template tabs. Click <b>Create Template </b> and fill all the query.</li>
+            <li>Firstly fill the Name query and Upload a template Image. You can Import your Media Image here by clicking Media Import link. </li>
+            <li>You also can add youtube video. for this please click "Video" button which set textarea above buttons. it will popup a input field, then give your youtube link only. </li>
+            <li>Press the "Submit" button.</li>
+            <li>That's it!</li>
+        </ul>
+        <div class="page-header"><h3>Creating a Template</h3>
+            <hr class="notop">
+        </div>
+        <p>Follow the above instructions apprently you can help the below screenshot image instruction.</p>
+        <img style="width: 100%" src="assets/img/template-video.png">
+        <img style="width: 100%" src="assets/img/template.png">
+        <img style="width: 100%" src="assets/img/alltemplate.png">
+    </section>
+    <!-- Template Section End -->
+
+
+    <!-- Email List Section start -->
+    <section id="email_list">
+        <div class="page-header"><h3>Email List setting</h3>
+            <hr class="notop">
+        </div>
+        <h2>Email List Setting Process</h2>
+        <ul>
+            <li>Go to dashboard. Click <b>Email List </b> Menu to create a Email List. </li>
+            <li>It will expand with All Email List & Create Email List tabs. Click <b>Create Email List </b> and fill all the query.</li>
+            <li>Firstly Give a Email Group Name, Type or copy paste all your emails by separating a "Comma" which emails contain in this group.</li>
+            <li>You also can upload excell file email list, in this purpose there are a model how to write down emails in your excel file, just Click "Download Sample Email List" and follow the system.</li>
+            <li>You also can add youtube video. for this please click "Video" button which set textarea above buttons. it will popup a input field, then give your youtube link only. </li>
+            <li>After all of this, Press the "Submit" button.</li>
+            <li>That's it!</li>
+        </ul>
+        <div class="page-header"><h3>Creating a Email List</h3>
+            <hr class="notop">
+        </div>
+        <p>Follow the above instructions apprently you can help the below screenshot image instruction.</p>
+        <img style="width: 100%" src="assets/img/email-list.png">
+        <img style="width: 100%" src="assets/img/allEmail.png">
+    </section>
+    <!-- Email List Section End -->
+
+
+    <!-- Send Email Section start -->
+    <section id="send_email">
+        <div class="page-header"><h3>Send Email setting</h3>
+            <hr class="notop">
+        </div>
+        <h2>Send Email Setting Process</h2>
+        <ul>
+            <li> Go to dashboard. Click <b>Send Email </b> Menu to Send Email. </li>
+            <li> It will expand with "Send Email" & "Send Email by Email list" tabs. </li>
+            <li>Follow the below instructions</li>
+        </ul>
+        <div class="page-header"><h3>How to work with 'Send Email' Tab</h3>
+            <hr class="notop">
+        </div>
+        <p>Fill all the query. Firslty type reciever email address in 'Emails Addresses' box.
+            Select a Template which you already created. If not click <a href="#template">here</a> to create a template.
+
+            Then type your subject. and Press 'Send e-mail' Button.
+            That's it!.
+        </p>
+        <img style="width: 100%" src="assets/img/sendemail.png">
+
+        <div class="page-header"><h3>How to work with 'Send Email by Email List' Tab</h3>
+            <hr class="notop">
+        </div>
+        <p>Fill and select all the query. Firslty select by marking reciever email group in 'Group' box.
+            Select a Template which you already created. If not click <a href="#template">here</a> to create a template.
+
+            Then type your subject. and Press 'Send e-mail' Button.
+            That's it!.
+        </p>
+        <img style="width: 100%" src="assets/img/sendmail.png">
+
+        <div class="page-header"><h3>Schedule Email (Send email later )</h3>
+            <hr class="notop">
+        </div>
+        <p>
+            Before use this option you have to enable cronjob in your server. Just add this line to your cron job
+        <div>* * * * * php /path/to/your/project/artisan schedule:run >> /dev/null 2>&1</div>
+        </p>
+        <p>To send email later just click on "send later" button and set your desire time.
+
+        <img style="width: 100%" class="img-responsive" src="assets/img/send_later.png">
+
+        </p>
+    </section>
+    <!-- Send Email Section End -->
+
+
+    <!-- social_login Section Start -->
+    <section id="social_login">
+        <div class="page-header"><h3>Social Login</h3>
+            <hr class="notop">
+        </div>
+        <p>In order to make social login (logging in via google, twitter and facebook) work you will need to register
+            for a corresponding app and get that services <strong>Client ID</strong> and <strong>Client Secret</strong>.
+            Check out the section for each service for a detailed instruction for how to register and get those tokens.
+            Once you've got your client id and secret simply enter them in corresponding field in admin area -&gt; third
+            party services and keys.</p>
+        <br/>
+        <img style="width: 100%" src="assets/img/social-login.png" class="screenshot-image">
+        <!-- ************** Facebook ********************** -->
+        <div class="page-header" id="fb"><h3>Facebook</h3>
+            <hr class="notop">
+        </div>
+        <p> You can resgister for a facebook app <a target="_blank" href="https://developers.facebook.com/">Here</a> by
+            clicking on <strong>My Apps &gt; add a new app</strong> at the top. Once you create the app you can find
+            your id and secret in your app dashboard, you will also need to enter your site url in <strong>Settings &gt;
+                site url field</strong> and make your app public from <strong>Staus &amp; Review</strong> tab.</p>
+        <br/>
+        <img style="width: 100%" src="assets/img/facebook_ex_1.png" class="screenshot-image">
+        <img style="width: 100%" src="assets/img/facebook.png" class="screenshot-image">
+        <!--************** Twitter ********************** -->
+        <div class="page-header" id="twitter"><h3>Twitter</h3>
+            <hr class="notop">
+        </div>
+        <p>You can register for a twitter app <a target="_blank" href="https://dev.twitter.com/apps/new">Here</a>, after
+            you register you will need to enter your site url in <strong>Website</strong> and <strong>Callback
+                Url</strong> fields in your app settings, you can find your key and secret in the <strong>Keys &amp;
+                Access Tokens</strong> tab.</p>
+        <br/>
+        <p>Set callback url</p>
+        <img style="width: 100%" src="assets/img/twitter_call_back.png" class="screenshot-image">
+        <p>Get client ID and Client Secret</p>
+        <img style="width: 100%" src="assets/img/twitter-id-secret.png" class="screenshot-image">
+
+        <!--************** Google ********************** -->
+        <div class="page-header" id="google"><h3>Google</h3>
+            <hr class="notop">
+        </div>
+        <p>You can register for a google app <a target="_blank" href="https://console.developers.google.com/project/_/apiui/apis/library">Here</a>
+            by clicking on <strong>Create new project</strong>, after creating new project go to credentials tab and in
+            the authorized redirect uri field enter <strong>http://yoursiteurl.com/auth/social/google/login</strong>,
+            you might also need to enable <strong>Google plus</strong> and <strong>contacts</strong> APIs.</p>
+        <br/>
+        <img style="width: 100%" src="assets/img/google_ex_1.jpg" class="screenshot-image">
+        <img style="width: 100%" src="assets/img/social_ex_3.jpg" class="screenshot-image">
+
+        <!--************** Github ********************** -->
+        <div class="page-header" id="github"><h3>Github</h3>
+            <hr class="notop">
+        </div>
+        <p>You can register for a github app <a target="_blank"
+                                                href="https://github.com/settings/applications/new">Here</a> by clicking
+            on <strong>Create new project</strong>, after creating new project go to credentials tab and in the
+            authorized redirect uri field enter <strong>http://yoursiteurl.com/github/callback</strong></p>
+        <br/>
+        <img style="width: 100%" src="assets/img/github.png" class="screenshot-image">
+
+        <!--************** Linked In ********************** -->
+        <div class="page-header" id="linkedin"><h3>Linked In</h3>
+            <hr class="notop">
+        </div>
+        <p>You can register for a github app <a target="_blank"
+                                                href="https://www.linkedin.com/developer/apps/new">Here</a> by clicking
+            on <strong>Create Application</strong>, after creating new Application with valid data. Hit submit and on
+            next page you have to put your authorized redirect uri field enter
+            <strong>http://yoursiteurl.com/linkedin/callback</strong></p>
+        <br/>
+        <img style="width: 100%" src="assets/img/linkedIn.png" class="screenshot-image">
+    </section>
+    <!-- Settings Section End
+    <!-- mail Section Start -->
+    <section id="mail">
+        <div class="page-header"><h3>Mail Settings</h3>
+            <hr class="notop">
+        </div>
+
+        <p>In order to make mail work, you will need to register for a mail API key. Send your email any smtp credential. Let's first have a lookg with <a href='//mailgun.com'>mailgun</a></p>
+
+        <h3 id="mailgun">Register for Mailgun api key</h3>
+        <p>To register for mailgun key go to this <a target="_blank" href="https://mailgun.com/signup">url</a>, create a new account and then log in. Verify your account with email then mobile number. Then click <strong>Domains</strong> then click Active Domain</p>
+        <p>Copy 'SMTP Hostname' value and paste that Dashboard > Settings > Email Settings > select SMTP in 'SMTP Hostname' box</p>
+        <p>Copy 'Default SMTP Login' value and paste that Dashboard > Settings > Email Settings > select SMTP in 'SMTP Username' box</p>
+        <p>Copy 'Default Password' value and paste that Dashboard > Settings > Email Settings > select SMTP in 'SMTP Password' box</p>
+        <p>Press Dashboard 'Submit' Button. That's it. </p>
+
+        <img style="width: 100%"  src="assets/img/msignup.png">
+        <p>After signpu, Please check your mail inbox. Open verification mail and confirm your account.</p>
+        <img style="width: 100%"  src="assets/img/mactivate.png" class="screenshot-image">
+        <img style="width: 100%"  src="assets/img/mphone.png">
+        <img style="width: 100%" src="assets/img/msandbox.png">
+
+
+        <h3 id="amazon_ses">Register for Amazon SES api key</h3>
+        <p>. When you sign up for AWS, your account is automatically signed up for all AWS services. <a target="_blank" href="https://www.amazon.com/ap/signin?openid.assoc_handle=aws&openid.return_to=https%3A%2F%2Fsignin.aws.amazon.com%2Foauth%3Fresponse_type%3Dcode%26client_id%3Darn%253Aaws%253Aiam%253A%253A015428540659%253Auser%252Fhomepage%26redirect_uri%3Dhttps%253A%252F%252Fconsole.aws.amazon.com%252Fconsole%252Fhome%253Fstate%253DhashArgs%252523%2526isauthcode%253Dtrue%26noAuthCookie%3Dtrue&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&action=&disableCorpSignUp=&clientContext=&marketPlaceId=&poolName=&authCookies=&pageId=aws.ssop&siteState=registered%2Cen_US&accountStatusPolicy=P1&sso=&openid.pape.preferred_auth_policies=MultifactorPhysical&openid.pape.max_auth_age=120&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&server=%2Fap%2Fsignin%3Fie%3DUTF8&accountPoolAlias=&forceMobileApp=0&language=en_US&forceMobileLayout=0">url</a>, create a new account and then log in. Verify your account with email. Then click login and go to SES Service. </p>
+        <p>To know in details Click <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/quick-start.html">here </a> Amazon official SES documentation. after completing all of this</p>
+
+        <p>Copy 'SMTP Hostname' value and paste that Dashboard > Settings > Email Settings > select SMTP in 'SMTP Hostname' box</p>
+        <p>Copy ' SMTP username' value and paste that Dashboard > Settings > Email Settings > select SMTP in 'SMTP Username' box</p>
+        <p>Copy ' Password' value and paste that Dashboard > Settings > Email Settings > select SMTP in 'SMTP Password' box</p>
+        <p>Press Dashboard 'Submit' Button. That's it. </p>
+
+        <img style="width: 100%"  src="assets/img/Signup.png">
+        <img style="width: 100%"  src="assets/img/singup2.png" class="screenshot-image">
+        <img style="width: 100%"  src="assets/img/signup3.png">
+
+
+
+        <h3 id="mandrill">Mandril</h3>
+        <p>In order to make mail work (for password reset and other functions), you will need to register for a mandrill API key. Mandrill is used to avoid the many problems that occur when using public smtp servers (like gmail or your hostings private one). Here's how to get your API key.</p>
+
+        <p>If you want to use SMTP instead (or one of the other available options), go to <strong>admin area &gt; settings &gt; mail</strong> and simply change mandrill to another option and enter any other required details like host, usernamer, password etc.</p>
+
+        <h3>Register for mandrill api key</h3>
+        <p>To register for mandrill key go to this <a target="_blank" href="https://mandrill.com/signup/">url</a>, create a new account and then log in. Then click <strong>get api keys -&gt; +add api key</strong></p>
+        <img src="assets/img/mandrill_ex_1.png">
+        <img src="assets/img/mandrill_ex_2.png" class="screenshot-image">
+        <p>Then simply copy mandrill api key and enter it into corresponding field in <strong>admin area &gt; settings &gt; mail</strong></p>
+        <img src="assets/img/mandrill_ex_3.png" class="screenshot-image">
+        <img src="assets/img/mandrill_ex_4.png">
+
+    </section>
+
+    <!-- User Section Start -->
+    <section id="user">
+        <div class="page-header"><h3>Users</h3>
+            <hr class="notop">
+        </div>
+        <p style="text-align: justify;; width: 800px;">
+            The tab Users You will can manage users. You can restrict users activity by 'active' and 'ban' them.
+            It's great opportunity to you that you also ban individual user and active any user individually.
+
+
+        </p>
+        <br/>
+        <img src="assets/img/User.png" class="screenshot-image">
+
+    </section>
+    <!-- User Section End -->
+    <!-- User Section Start -->
+    <section id="track_log">
+        <div class="page-header"><h3>All Activities</h3>
+            <hr class="notop">
+        </div>
+        <p style="text-align: justify;; width: 800px;">
+            The tab Activities You can view all user Activities . It's also help you to view individual user log in and log out.
+            You will can restrict user activities, manage their info update and create user. It will be able to full controll over
+            your user actions.
+
+        </p>
+        <br/>
+        <img src="assets/img/Activities.png" class="screenshot-image">
+
+    </section>
+    <section id="backup">
+        <div class="page-header"><h3>Database Backup</h3>
+            <hr class="notop">
+        </div>
+        <p style="text-align: justify;; width: 800px;">
+            You can easily take backup of your database by simply clicking on the menu tab Database Backup. Everything in your database will get in the
+            database that will be exported as a zip file in your local directory.
+        </p>
+        <br/>
+        <img src="assets/img/backup.png" class="screenshot-image">
+
+    </section>
+    <!-- User Section End -->
+    <!-- Source Code Section Start -->
+    <section id="source_code">
+        <div class="page-header"><h3>Source Code Structure</h3>
+            <hr class="notop">
+        </div>
+        <ul>
+            <li>Build up on powerful Laravel php framework.</li>
+            <li>For more info on Laravel , go to : https://laravel.com/docs/5.2 /</li>
+            <li>Follows MVC model.</li>
+        </ul>
+        <h5>Included Files:</h5>
+        <ul>
+            <li>Controller path : application/app/Http/Controllers</li>
+            <li>Login & Register controller : application/app/Http/Controllers/Auth</li>
+            <li>Models Path: application/app/Models/</li>
+            <li>Configuration files : application/config and .env</li>
+            <li>Template css files : css/</li>
+            <li>Template font files : fonts/</li>
+            <li>Template js files : js</li>
+            <li>Template image files : img/</li>
+            <li>images uploaded in : uploads/</li>
+        </ul>
+        <br/>
+    </section>
+    <!-- Source Code Section Start -->
+
+
+    <!-- Support Section Start -->
+    <section id="customer_support">
+        <div class="page-header"><h3>Customer Support</h3>
+            <hr class="notop">
+        </div>
+        <p style="text-align: justify;; width: 800px;"> xCoder.io is always ready to serve its valued clients.
+            For any kind of after sales support or customization - Don't hesitate to contact us at: <br/><br/>
+            E-Mail: <a href="mailto:xcoderdotio@gmail.com">xcoderdotio@gmail.com</a><br/>
+        </p>
+        <br/>
+        <img src="assets/img/rate_us.jpg" alt="rate_us" class="rate-us">
+    </section>
+    <!-- Support Section End -->
+</div>
+</body>
+</html>
